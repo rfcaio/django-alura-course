@@ -1,14 +1,7 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Recipes</title>
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-  <main>
-    <h1>Recipes page</h1>
-  </main>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<main>
+  {% include 'partials/menu.html' %}
+  <h1>Recipes page</h1>
+</main>
+{% endblock %}
