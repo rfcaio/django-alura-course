@@ -2,4 +2,15 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    recipes = [
+        {
+            'description': 'Cheese pizza'
+        },
+        {
+            'description': 'Chocolate cake'
+        }
+    ]
+    context = {
+        'recipes': recipes
+    }
+    return render(request, 'index.html', context)

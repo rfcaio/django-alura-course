@@ -3,5 +3,13 @@
 <main>
   {% include 'partials/menu.html' %}
   <h1>Recipes page</h1>
+
+  <nav>
+    <ul>
+      {% for recipe in recipes %}
+      <li>{{recipe.description}}</li>
+      {% endfor %}
+    </ul>
+  </nav>
 </main>
 {% endblock %}
