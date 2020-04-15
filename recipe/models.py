@@ -11,3 +11,6 @@ class Recipe(models.Model):
     portions = models.CharField(max_length=100)
     preparation_mode = models.TextField()
     preparation_time = models.IntegerField()
+
+    def __str__(self):
+        return self.name

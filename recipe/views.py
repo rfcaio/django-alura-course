@@ -1,15 +1,10 @@
 from django.shortcuts import render
 
+from .models import Recipe
+
 
 def index(request):
-    recipes = [
-        {
-            'description': 'Cheese pizza'
-        },
-        {
-            'description': 'Chocolate cake'
-        }
-    ]
+    recipes = Recipe.objects.all()
     context = {
         'recipes': recipes
     }

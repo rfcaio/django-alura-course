@@ -25,3 +25,9 @@ $ git clone https://github.com/rfcaio/django-alura-course.git
 $ cd django-alura-course
 $ python manage.py runserver
 ```
+
+Create a super user.
+
+```
+$ python manage.py createsuperuser
+```
