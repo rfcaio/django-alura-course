@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+  {% include 'partials/menu.html' %}
+  <h1>{{recipe.name}}</h1>
+  <small>{{recipe.created_at}}</small>
+  <p>{{recipe.ingredients}}</p>
+  <p>{{recipe.preparation_mode}}</p>
+</main>
+{% endblock %}
