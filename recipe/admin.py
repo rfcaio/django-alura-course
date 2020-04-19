@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import Recipe
 
+
 class RecipeList(admin.ModelAdmin):
     list_display = ('id', 'name', 'category', 'created_at')
     list_display_links = ('id', 'name')
