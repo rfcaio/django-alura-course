@@ -2,6 +2,9 @@
 {% block content %}
 <main>
   {% include 'partials/menu.html' %}
+  {% if recipe.image %}
+  <img alt="{{recipe.name}}" src="{{recipe.image.url}}">
+  {% endif %}
   <h1>{{recipe.name}}</h1>
   <small>{{recipe.created_at}}, by {{recipe.person}}</small>
   <p>{{recipe.ingredients}}</p>

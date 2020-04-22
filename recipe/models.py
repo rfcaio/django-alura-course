@@ -8,6 +8,7 @@ from person.models import Person
 class Recipe(models.Model):
     category = models.CharField(max_length=100)
     created_at = models.DateTimeField(blank=True, default=datetime.now)
+    image = models.ImageField(blank=True, upload_to='fotos/%d/%m/%Y')
     ingredients = models.TextField()
     is_published = models.BooleanField(default=False)
     name = models.CharField(max_length=200)

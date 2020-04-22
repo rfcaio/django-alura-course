@@ -90,3 +90,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'djangoaluracourse/static')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'djangoaluracourse/media')
+
+MEDIA_URL = '/media/'
