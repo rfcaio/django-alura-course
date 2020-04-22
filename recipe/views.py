@@ -4,7 +4,7 @@ from .models import Recipe
 
 
 def index(request):
-    recipes = Recipe.objects.filter(is_published=True)
+    recipes = Recipe.objects.filter(is_published=True).order_by('-created_at')
     context = {
         'recipes': recipes
     }
