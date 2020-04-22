@@ -4,7 +4,7 @@ from .models import Recipe
 
 
 def index(request):
-    recipes = Recipe.objects.all()
+    recipes = Recipe.objects.filter(is_published=True)
     context = {
         'recipes': recipes
     }
