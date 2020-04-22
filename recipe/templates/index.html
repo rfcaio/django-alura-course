@@ -4,6 +4,7 @@
   {% include 'partials/menu.html' %}
   <h1>Recipes page</h1>
 
+  {% if recipes %}
   <nav>
     <ul>
       {% for recipe in recipes %}
@@ -11,5 +12,8 @@
       {% endfor %}
     </ul>
   </nav>
+  {% else %}
+  <p>No recipes to list.</p>
+  {% endif %}
 </main>
 {% endblock %}
