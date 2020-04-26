@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 <main>
+  <form action="{% url 'search' %}">
+    <input name="search" type="search">
+    <input type="submit" value="Send">
+  </form>
   {% include 'partials/menu.html' %}
   <h1>Recipes page</h1>
 

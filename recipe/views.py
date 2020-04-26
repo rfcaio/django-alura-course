@@ -16,3 +16,18 @@ def recipe(request, id):
         'recipe': recipe
     }
     return render(request, 'recipe.html', context)
+
+def search(request):
+    recipes = []
+    if ('search' in request.GET) and request.GET['search']:
+        search_key = request.GET['search']
+        recipes = (
+            Recipe
+                .objects
+                .filter(is_published=True, name__icontains=search_key)
+                .order_by('-created_at')
+        )
+    context = {
+        'recipes': recipes
+    }
+    return render(request, 'index.html', context)
