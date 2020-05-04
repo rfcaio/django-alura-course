@@ -19,6 +19,7 @@ INSTALLED_APPS = [
 
     'person',
     'recipe',
+    'user',
 ]
 
 MIDDLEWARE = [

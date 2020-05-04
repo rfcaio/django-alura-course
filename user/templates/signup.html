@@ -1,0 +1,29 @@
+{% extends 'user_base.html' %}
+{% block content %}
+<h1>Sign Up</h1>
+<form action="" method="GET">
+  <div>
+    <label for="ipt-full-name">Full name</label>
+    <input id="ipt-full-name" name="full_name" type="text">
+  </div>
+
+  <div>
+    <label for="ipt-email">Email</label>
+    <input id="ipt-email" name="email" type="email">
+  </div>
+
+  <div>
+    <label for="ipt-password">Password</label>
+    <input id="ipt-password" name="password" type="password">
+  </div>
+
+  <div>
+    <label for="ipt-confirm-password">Confirm password</label>
+    <input id="ipt-confirm-password" name="confirm_password" type="password">
+  </div>
+
+  <div>
+    <button type="submit">Sign up</button>
+  </div>
+</form>
+{% endblock %}
