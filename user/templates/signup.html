@@ -1,25 +1,32 @@
 {% extends 'user_base.html' %}
 {% block content %}
 <h1>Sign Up</h1>
-<form action="" method="GET">
+
+<form action="{% url 'signup' %}" method="POST">
+  {% csrf_token %}
   <div>
-    <label for="ipt-full-name">Full name</label>
-    <input id="ipt-full-name" name="full_name" type="text">
+    <label for="ipt-username">User name</label>
+    <input id="ipt-username" name="username" required type="text">
   </div>
 
   <div>
     <label for="ipt-email">Email</label>
-    <input id="ipt-email" name="email" type="email">
+    <input id="ipt-email" name="email" required type="email">
   </div>
 
   <div>
     <label for="ipt-password">Password</label>
-    <input id="ipt-password" name="password" type="password">
+    <input id="ipt-password" name="password" required type="password">
   </div>
 
   <div>
     <label for="ipt-confirm-password">Confirm password</label>
-    <input id="ipt-confirm-password" name="confirm_password" type="password">
+    <input
+      id="ipt-confirm-password"
+      name="confirm_password"
+      required
+      type="password"
+    >
   </div>
 
   <div>
