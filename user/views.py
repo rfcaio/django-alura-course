@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 
+def signin(request):
+    return render(request, 'signin.html')
 
 def signup(request):
     if (request.method == 'POST'):
