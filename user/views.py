@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 
 
+def dashboard(request):
+    if not request.user.is_authenticated:
+        return redirect('signin')
+    return render(request, 'dashboard.html')
+
 def signin(request):
     if request.method == 'POST':
         email = request.POST['email']
@@ -10,7 +15,7 @@ def signin(request):
 
         if email == '' or password == '':
             print('A valid email and password are required.')
-            return redirect('sigin')
+            return redirect('signin')
 
         if User.objects.filter(email=email).exists():
             username = (
@@ -22,7 +27,7 @@ def signin(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('index')
+                return redirect('dashboard')
     return render(request, 'signin.html')
 
 def signup(request):
