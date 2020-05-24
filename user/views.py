@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 
@@ -29,6 +29,10 @@ def signin(request):
                 login(request, user)
                 return redirect('dashboard')
     return render(request, 'signin.html')
+
+def signout(request):
+    logout(request)
+    return redirect('index')
 
 def signup(request):
     if request.method == 'POST':

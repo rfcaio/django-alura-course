@@ -5,10 +5,11 @@
     <ul>
       <li><a href="{% url 'index' %}">Home</a></li>
       <li><a href="{% url 'dashboard' %}">My recipes</a></li>
+      <li><a href="{% url 'signout' %}">Sign out</a></li>
     </ul>
   </nav>
 
-  <h1>Hello, {{ user.username }}.</h1>
+  <h1>Hello, {{user.username}}.</h1>
 
   {% if recipes %}
   <nav>
