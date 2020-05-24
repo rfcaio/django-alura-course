@@ -1,6 +1,12 @@
 <nav>
   <ul>
     <li><a href="{% url 'index' %}">Home</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'dashboard' %}">My recipes</a></li>
+    <li><a href="{% url 'signout' %}">Sign out</a></li>
+    {% else %}
+    <li><a href="{% url 'signin' %}">Sign in</a></li>
     <li><a href="{% url 'signup' %}">Sign up</a></li>
+    {% endif %}
   </ul>
 </nav>

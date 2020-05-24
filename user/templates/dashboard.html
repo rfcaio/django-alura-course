@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <main>
-  <nav>
-    <ul>
-      <li><a href="{% url 'index' %}">Home</a></li>
-      <li><a href="{% url 'dashboard' %}">My recipes</a></li>
-      <li><a href="{% url 'signout' %}">Sign out</a></li>
-    </ul>
-  </nav>
+  {% include 'partials/menu.html' %}
 
   <h1>Hello, {{user.username}}.</h1>
 
